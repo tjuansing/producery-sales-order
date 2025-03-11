@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bulma Flexbox Form</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <section class="section">
+      <h1 class="title">Producery Sales Order</h1>
+
+      <form id="orderForm">
+        <!--Customer Information-->
+        <div class="box">
+          <h2 class="subtitle">Customer Information</h2>
+          <div class="field">
+            <label class="label">Customer Name</label>
+            <div class="control">
+              <input
+                class="input"
+                type="text"
+                name="customerName"
+                placeholder="Customer Name"
+                required
+              />
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Staff Name</label>
+            <div class="control">
+              <input
+                class="input"
+                type="text"
+                name="staffName"
+                placeholder="Staff Name"
+                required
+              />
+            </div>
+          </div>
+        </div>
+        <!--Customer Orders-->
+        <div class="box">
+          <h2 class="subtitle">Customer Orders</h2>
+          <div id="orderList">
+            <!--Items to be added here-->
+          </div>
+          <button
+            type="button"
+            class="button is-primary mt-3"
+            onclick="addItem()"
+          >
+            Add Item
+          </button>
+          <button type="submit" class="button is-success mt-3">Submit</button>
+        </div>
+      </form>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
